@@ -6,7 +6,6 @@ const auth = require("./routes/auth")
 const club = require("./routes/club")
 const round=require("./routes/round")
 const sig=require("./routes/sig")
-const prefer= require("./routes/preference")
 const announce = require("./routes/announcements")
 const cors = require("cors")
 
@@ -19,7 +18,6 @@ app.use('/api/auth', auth);
 app.use('/api/clubs', club);
 app.use('/api/sigs', sig);
 app.use('/api/round', round);
-app.use('/api/prefer', prefer);
 app.use('/api/announce', announce);
 
 mongoose
