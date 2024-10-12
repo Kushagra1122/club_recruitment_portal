@@ -99,37 +99,7 @@ const dlt = async (req, res) => {
 const reject = async (req,res) => {
     try {
    
-        const Sig = await sig.findById(req.body.sigId)
-    
-        let arr2 = Sig.rounds
-        let i = arr2.indexOf(req.params.id)
-        const Round = await round.findById(req.params.id)
-        let arr = Round.cleared
-        arr.push(req.body.userId)
-        await round.findByIdAndUpdate(req.params.id, { cleared: arr }, { new: true })
-        if (i + 1 >= arr2.length) {
-            let arr3 = Sig.member
-            arr3.push(arr)
-            await sig.findByIdAndUpdate(req.body.sigId,{waitllist:arr3},{new:true})
-            return res.status(200).json({
-                success:true})
-        
-        }
-        else {
-       
-            const nextRound = await round.findById(arr2[i+1])
-          
-            let arr4=nextRound.students
-          
-            arr4.push(...arr)
-    
-            await round.findByIdAndUpdate(arr2[i + 1], { students: arr4 }, { new: true })
-       
-            return res.status(200).json({
-                success: true
-            })
-        }
-
+      
     } catch (error) {
 
     }

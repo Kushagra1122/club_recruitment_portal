@@ -154,11 +154,14 @@ const event = async (req, res) => {
 }
 const register=async(req,res)=>{
     try {
+        let arr=[]
       const Sig=await sig.findById(req.params.id)
-      let arr=Sig.students
-    
+      if(Sig.students!==null){
+           arr = Sig.students
+      }
+     
           arr.push(req.body.userId) 
-      
+      console.log(arr)
      
         await sig.findByIdAndUpdate(req.params.id,{students:arr},{new:true})
     
@@ -167,7 +170,7 @@ const register=async(req,res)=>{
         let arr2=User.registered
       
             arr2.push({ club: Sig.club, sig: Sig._id })
-            console.log(arr2)
+            
         
         
         await user.findByIdAndUpdate(req.body.userId,{registered:arr2},{new:true})

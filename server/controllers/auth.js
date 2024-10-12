@@ -28,7 +28,8 @@ const register = async (req, res) => {
 
 
 if(email==="NITK@admin.in"){
-  const check=await user.find({role:"Admin"})
+  const check=await user.findOne({role:"Admin"})
+  console.log(check)
   if(check){
       return res.status(400).json({
           message: "Admin is already there",
