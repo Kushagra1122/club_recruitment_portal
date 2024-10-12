@@ -9,16 +9,14 @@ Waitlist Management: An integrated waitlist feature for handling oversubscribed 
 Interview Scheduling: Organizes interview slots for selected candidates.
 
 Tech Stack 
-Frontend:
-Vite
-React.js
-Tailwind CSS
-Backend:
-Node.js
-Express.js
+
+Frontend: Vite,React.js,Tailwind CSS
+
+Backend: Node.js,Express.js
+
 MongoDB (for database)
-Authentication:
-JWT (JSON Web Token)
+
+Authentication: JWT (JSON Web Token)
 
 
 Installation
@@ -27,13 +25,8 @@ Clone the repository:
 git clone https://github.com/Kushagra1122/club_recruitment_portal.git
 Navigate to the project directory:
 
-cd club_recruitment_portal
-Install dependencies for both the frontend and backend:
+Install dependencies for both the client and server:
 
-npm install
-Run the development server:
-
-npm run dev
 
 use email:NITK@admin.in for admin role
 video : https://youtu.be/Ny64obOjUdw?si=4qx8_uCZDD848VKg
