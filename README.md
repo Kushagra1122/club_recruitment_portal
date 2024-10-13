@@ -25,8 +25,13 @@ Clone the repository:
 git clone https://github.com/Kushagra1122/club_recruitment_portal.git
 Navigate to the project directory:
 
-Install dependencies for both the client and server:
+Install dependencies for both the client and server
 
+create a .env file in server folder which should contain :
+
+PORT = 3000 (it should be 3000 only)
+URI = "Your mongodb uri"
+JWT_SECRET = "Your jwt secret key"
 
 use email:NITK@admin.in for admin role
 video : https://youtu.be/Ny64obOjUdw?si=4qx8_uCZDD848VKg
