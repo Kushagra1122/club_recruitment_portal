@@ -22,7 +22,7 @@ const add = async (req, res) => {
                 contact,
                 sigHead: User._id,
                 club:req.params.id,
-                students: [User._id]
+              //  students: [User._id]
 
             });
             const Club = await club.findById(req.params.id)
